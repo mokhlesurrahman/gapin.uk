@@ -40,8 +40,8 @@ require_once('adm/include/connect.php');
 						<div class="logo">
 							<img src="images/logo.png" alt="Totally - Coming Soon Page">
 						</div>
-						<h2><font color="#002060">GLOBAL ACADEMY OF PROFESSIONALS (GAP)</font> </h2>
-						<h4><font color="#5880C5">A UK Government registered Company</font></h4>
+						<h2><font color="#002060"><?php echo strCompanyName; ?></font> </h2>
+						<h4><font color="#5880C5"><?php echo strCompanySlogan; ?></font></h4>
 						<h5>https://gapin.uk</h5>
 					</div>
 					<div class="small-12 columns">
@@ -63,14 +63,41 @@ require_once('adm/include/connect.php');
 				<br>
 				<div class="row social">
 					<div class="small-12 columns">
-						<a href="#"><img src="images/icon-facebook.png" alt="" style="opacity: 0.4;"></a>
-						<a href="#"><img src="images/icon-twitter.png" alt="" style="opacity: 0.4;"></a>
-						<a href="#"><img src="images/icon-gplus.png" alt="" style="opacity: 0.4;"></a>
-						<a href="#"><img src="images/icon-youtube.png" alt="" style="opacity: 0.4;"></a>
-						<a href="#"><img src="images/icon-vimeo.png" alt="" style="opacity: 0.4;"></a>
-						<a href="#"><img src="images/icon-pinterest.png" alt="" style="opacity: 0.4;"></a>
-						<a href="#"><img src="images/icon-instagram.png" alt="" style="opacity: 0.4;"></a>
-						<a href="#"><img src="images/icon-rss.png" alt="" style="opacity: 0.4;"></a>
+                        <?php
+                        if (strCompanyFacebook != ''){
+                            ?>
+                            <a href="<?php echo strCompanyFacebook;?>"><img src="images/icon-facebook.png" alt="" style="opacity: 0.4;"></a>
+                            <?php
+                        }
+                        ?>
+						<?php
+						if (strCompanyInstagram != ''){
+						    ?>
+                            <a href="#"><img src="images/icon-instagram.png" alt="" style="opacity: 0.4;"></a>
+							<?php
+						}
+						?>
+						<?php
+						if (strCompanyYouTube != ''){
+						    ?>
+                            <a href="#"><img src="images/icon-youtube.png" alt="" style="opacity: 0.4;"></a>
+							<?php
+						}
+						?>
+						<?php
+						if (strCompanyPinterest != ''){
+                            ?>
+                            <a href="#"><img src="images/icon-pinterest.png" alt="" style="opacity: 0.4;"></a>
+							<?php
+						}
+						?>
+						<?php
+						if (strCompanyLinkedIn != ''){
+							?>
+                            <a href="#"><img src="images/icon-linkedin.png" alt="" style="opacity: 0.4;"></a>
+                            <?php
+						}
+						?>
 					</div>
 				</div>
 			</div>

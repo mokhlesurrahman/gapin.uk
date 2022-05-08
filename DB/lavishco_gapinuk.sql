@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2022 at 09:04 AM
+-- Generation Time: May 08, 2022 at 09:34 AM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.3.0
 
@@ -59,18 +59,6 @@ CREATE TABLE `dbt_slider` (
   `strDescription` longtext NOT NULL,
   `photo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `dbt_slider`
---
-
-INSERT INTO `dbt_slider` (`intSliderID`, `intSisterID`, `strSmallHeader`, `strTopHeader`, `strShortLink`, `strDescription`, `photo`) VALUES
-(1, 1, 'Anglia Ruskin University - ARU', '', '', '', '202204282105.png'),
-(2, 1, 'Aston University', '', '', '', '202204283297.png'),
-(3, 1, 'Bangor University', '', '', '', '202204283217.png'),
-(4, 1, 'Anglia Ruskin University - ARU', '', '', '', '202204282105.png'),
-(5, 1, 'Aston University', '', '', '', '202204283297.png'),
-(6, 1, 'Bangor University', '', '', '', '202204283217.png');
 
 -- --------------------------------------------------------
 
@@ -159,15 +147,18 @@ CREATE TABLE `tbl_settings` (
   `strOurInstructorPageStatus` enum('Show','Hide') NOT NULL DEFAULT 'Hide',
   `strContactInformation` text,
   `strPopupImage` varchar(255) DEFAULT NULL,
-  `isShowPopup` enum('Yes','No') NOT NULL DEFAULT 'No'
+  `isShowPopup` enum('Yes','No') NOT NULL DEFAULT 'No',
+  `strCompanyInstagram` text,
+  `strCompanyYouTube` text,
+  `strCompanyPinterest` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_settings`
 --
 
-INSERT INTO `tbl_settings` (`intSettingsID`, `strCompanyLogo`, `strCompanyAddress`, `adminEmail`, `master_password`, `strHeaderEmail`, `strHeaderPhone`, `strMobileNumberStatus`, `strHomePageLayOut`, `strLogo`, `strProjectComplated`, `strConsultants`, `strAwardsWining`, `strSatisfiedCustomers`, `strShortDescription`, `date_format_id`, `currency_code`, `settings`, `strTeamDescription`, `strInstructorDescription`, `meta_keyword`, `meta_description`, `strCompanyFacebook`, `strCompanyTwitter`, `strCompanyWhatsapp`, `strCompanyLinkedIn`, `strCompanyAcronym`, `strCompanySlogan`, `course_accreditation`, `membership`, `provider`, `president_video`, `strOurInstructorPageStatus`, `strContactInformation`, `strPopupImage`, `isShowPopup`) VALUES
-(1, 'GLOBAL ACADEMY OF PROFESSIONALS (GAP)', 'Zenith Tower, House: 8/A/1, Dhanmondi, Road no. 14, Dhaka  - 1209', 'rezababu@gmail.com', '', 'gapinuk@gmail.com', '+880 1791-981818', 'Show', 'Single', '202204288371.png', 0, 0, 0, 0, 'Coming Soon...', 0, '', 'general', '', '', 'Coming Soon...', 'GLOBAL ACADEMY OF PROFESSIONALS (GAP)', 'https://www.facebook.com/', 'https://twitter.com/', 'https://api.whatsapp.com/send?phone=+447960272886', 'https://www.linkedin.com/', 'GAP', '', '', '', '', '', 'Hide', '<p>hello</p>', '202205085277.png', 'Yes');
+INSERT INTO `tbl_settings` (`intSettingsID`, `strCompanyLogo`, `strCompanyAddress`, `adminEmail`, `master_password`, `strHeaderEmail`, `strHeaderPhone`, `strMobileNumberStatus`, `strHomePageLayOut`, `strLogo`, `strProjectComplated`, `strConsultants`, `strAwardsWining`, `strSatisfiedCustomers`, `strShortDescription`, `date_format_id`, `currency_code`, `settings`, `strTeamDescription`, `strInstructorDescription`, `meta_keyword`, `meta_description`, `strCompanyFacebook`, `strCompanyTwitter`, `strCompanyWhatsapp`, `strCompanyLinkedIn`, `strCompanyAcronym`, `strCompanySlogan`, `course_accreditation`, `membership`, `provider`, `president_video`, `strOurInstructorPageStatus`, `strContactInformation`, `strPopupImage`, `isShowPopup`, `strCompanyInstagram`, `strCompanyYouTube`, `strCompanyPinterest`) VALUES
+(1, 'GLOBAL ACADEMY OF PROFESSIONALS (GAP)', 'Zenith Tower, House: 8/A/1, Dhanmondi, Road no. 14, Dhaka  - 1209', 'rezababu@gmail.com', '', 'gapinuk@gmail.com', '+880 1791-981818', 'Show', 'Single', '202204288371.png', 0, 0, 0, 0, 'Coming Soon...', 0, '', 'general', '', '', 'Coming Soon...', 'GLOBAL ACADEMY OF PROFESSIONALS (GAP)', 'https://www.facebook.com/', '', 'https://api.whatsapp.com/send?phone=+447960272886', 'https://www.linkedin.com/', 'GAP', 'A UK Government registered Company', '', '', '', '', 'Hide', '<p>hello</p>', '202205085277.png', 'Yes', 'https://www.instagram.com/', 'https://www.youtube.com/', 'https://www.pinterest.com/');
 
 -- --------------------------------------------------------
 
