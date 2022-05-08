@@ -73,28 +73,28 @@ require_once('adm/include/connect.php');
 						<?php
 						if (strCompanyInstagram != ''){
 						    ?>
-                            <a href="#"><img src="images/icon-instagram.png" alt="" style="opacity: 0.4;"></a>
+                            <a href="<?php echo strCompanyInstagram;?>"><img src="images/icon-instagram.png" alt="" style="opacity: 0.4;"></a>
 							<?php
 						}
 						?>
 						<?php
 						if (strCompanyYouTube != ''){
 						    ?>
-                            <a href="#"><img src="images/icon-youtube.png" alt="" style="opacity: 0.4;"></a>
+                            <a href="<?php echo strCompanyYouTube;?>"><img src="images/icon-youtube.png" alt="" style="opacity: 0.4;"></a>
 							<?php
 						}
 						?>
 						<?php
 						if (strCompanyPinterest != ''){
                             ?>
-                            <a href="#"><img src="images/icon-pinterest.png" alt="" style="opacity: 0.4;"></a>
+                            <a href="<?php echo strCompanyPinterest;?>"><img src="images/icon-pinterest.png" alt="" style="opacity: 0.4;"></a>
 							<?php
 						}
 						?>
 						<?php
 						if (strCompanyLinkedIn != ''){
 							?>
-                            <a href="#"><img src="images/icon-linkedin.png" alt="" style="opacity: 0.4;"></a>
+                            <a href="<?php echo strCompanyLinkedIn;?>"><img src="images/icon-linkedin.png" alt="" style="opacity: 0.4;"></a>
                             <?php
 						}
 						?>
